@@ -1,0 +1,13 @@
+################################################################################
+#
+# Filename : input_reader.cpp.mingw.dat
+#
+# Author : SpaceStudio generation engine
+#
+# Warning: This file content will be overwritten by the next generation process.
+#
+################################################################################
+DEVICE_READ	8	false	-1	61	unsigned+long
+DEVICE_READ	8	false	-1	65	unsigned+long
+DEVICE_READ	8	false	-1	67	unsigned+long
+MODULE_WRITE	1	true	-1	80	unsigned+long

@@ -1,0 +1,94 @@
+{
+  "type" : "record",
+  "name" : "ConfigFileInfo",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "coreConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : {
+        "type" : "record",
+        "name" : "ConfigFile",
+        "fields" : [ {
+          "name" : "dataFile",
+          "type" : "string"
+        }, {
+          "name" : "schemaFile",
+          "type" : "string"
+        } ]
+      }
+    }
+  }, {
+    "name" : "ModuleSlaveAdapterConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "ModuleSlaveAdapterFIFOConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "ISSAdapterConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "ISSAdapterFIFOConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "ModuleRoutingConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "AddressRangeConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "ProcessorMemoriesFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "ProcessorDebuggingFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "WindowBridgeConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "CPUCacheConfigFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "LinuxMonitoringFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  }, {
+    "name" : "CachePenaltyFiles",
+    "type" : {
+      "type" : "map",
+      "values" : "ConfigFile"
+    }
+  } ]
+}

@@ -1,0 +1,103 @@
+####################################
+## Cache/main memory configuration
+####################################
+	level: 1
+	type: instruction
+	enable: true
+	cache size: 32768
+	words per cacheline: 8
+	associativity: 4-way
+	replacement policy: LRU
+	write policy: write-back
+	write miss operation: write allocate
+	read miss penalty (cycles): 3
+	write miss penalty (cycles): 3
+----
+	level: 1
+	type: data
+	enable: true
+	cache size: 32768
+	words per cacheline: 8
+	associativity: 4-way
+	replacement policy: LRU
+	write policy: write-back
+	write miss operation: write allocate
+	read miss penalty (cycles): 3
+	write miss penalty (cycles): 3
+----
+	level: 2
+	type: both
+	enable: true
+	cache size: 524288
+	words per cacheline: 8
+	associativity: 8-way
+	replacement policy: LRU
+	write policy: write-back
+	write miss operation: write allocate
+	read miss penalty (cycles): 20
+	write miss penalty (cycles): 20
+----
+	main memory read miss penalty (cycles): 20
+	main memory write miss penalty (cycles): 20
+####################################
+## Cache/memory hierarchy
+####################################
+	core 0:
+		instruction --> l1-instruction --> l2-both --> main memory
+		data --> l1-data --> l2-both --> main memory
+	core 1:
+		instruction --> l1-instruction --> l2-both --> main memory
+		data --> l1-data --> l2-both --> main memory
+####################################
+## Cache statistic
+####################################
+	core 0:
+		l1-instruction
+			read hit:	485670
+			read miss:	2860 (8580 penalty cycles)
+			write hit:	0
+			write miss:	0 (0 penalty cycles)
+----
+		l1-data
+			read hit:	1295
+			read miss:	1318 (3954 penalty cycles)
+			write hit:	66
+			write miss:	85 (255 penalty cycles)
+----
+	core 1:
+		l1-instruction
+			read hit:	51920305
+			read miss:	32778 (98334 penalty cycles)
+			write hit:	0
+			write miss:	0 (0 penalty cycles)
+----
+		l1-data
+			read hit:	126431
+			read miss:	11725 (35175 penalty cycles)
+			write hit:	5069
+			write miss:	2370 (7110 penalty cycles)
+----
+	l2-both
+		read hit:	402087
+		read miss:	7001 (140020 penalty cycles)
+		write hit:	19011
+		write miss:	5 (100 penalty cycles)
+----
+####################################
+## Main memory statistic
+####################################
+	core 0:
+		inst. read miss:	0 (0 penalty cycles)
+		data  read miss:	0 (0 penalty cycles)
+		data write miss:	0 (0 penalty cycles)
+	core 1:
+		inst. read miss:	0 (0 penalty cycles)
+		data  read miss:	0 (0 penalty cycles)
+		data write miss:	0 (0 penalty cycles)
+####################################
+## Cumulative report
+####################################
+	read hit:	52935788
+	read miss:	55682 (286063 penalty cycles)
+	write hit:	24146
+	write miss:	2460 (7465 penalty cycles)

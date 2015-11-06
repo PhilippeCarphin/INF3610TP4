@@ -1,0 +1,13 @@
+################################################################################
+#
+# Filename : output_writer.cpp.mingw.dat
+#
+# Author : SpaceStudio generation engine
+#
+# Warning: This file content will be overwritten by the next generation process.
+#
+################################################################################
+MODULE_READ	1	true	-1	54	unsigned+long
+DEVICE_READ	8	false	-1	71	unsigned+long
+DEVICE_READ	8	false	-1	75	unsigned+long
+DEVICE_WRITE	8	false	-1	78	unsigned+long

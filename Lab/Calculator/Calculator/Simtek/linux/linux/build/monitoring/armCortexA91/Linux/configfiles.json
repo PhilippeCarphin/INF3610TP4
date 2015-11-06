@@ -1,0 +1,30 @@
+{
+  "coreConfigFiles" : { },
+  "ModuleSlaveAdapterConfigFiles" : { },
+  "ModuleSlaveAdapterFIFOConfigFiles" : { },
+  "ISSAdapterConfigFiles" : { },
+  "ISSAdapterFIFOConfigFiles" : { },
+  "ModuleRoutingConfigFiles" : { },
+  "AddressRangeConfigFiles" : { },
+  "ProcessorMemoriesFiles" : { },
+  "ProcessorDebuggingFiles" : { },
+  "WindowBridgeConfigFiles" : { },
+  "CPUCacheConfigFiles" : {
+    "armCortexA91.cpucache" : {
+      "dataFile" : "armCortexA91.cpucache.json",
+      "schemaFile" : "armCortexA91.cpucache.avsc"
+    }
+  },
+  "LinuxMonitoringFiles" : {
+    "armCortexA91.monitoring" : {
+      "dataFile" : "armCortexA91.monitoring.json",
+      "schemaFile" : "armCortexA91.monitoring.avsc"
+    }
+  },
+  "CachePenaltyFiles" : {
+    "armCortexA91.cache_penalty" : {
+      "dataFile" : "armCortexA91.cache_penalty.json",
+      "schemaFile" : "armCortexA91.cache_penalty.avsc"
+    }
+  }
+}

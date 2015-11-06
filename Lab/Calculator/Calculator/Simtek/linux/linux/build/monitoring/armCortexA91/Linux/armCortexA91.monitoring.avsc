@@ -1,0 +1,30 @@
+{
+  "type" : "record",
+  "name" : "LinuxMonitoringInfo",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "coreId",
+    "type" : {
+      "type" : "array",
+      "items" : "int"
+    }
+  }, {
+    "name" : "swTaskId",
+    "type" : {
+      "type" : "array",
+      "items" : "int"
+    }
+  }, {
+    "name" : "idleTask",
+    "type" : "int"
+  }, {
+    "name" : "taskSwitchAddress",
+    "type" : "long"
+  }, {
+    "name" : "taskPidOffset",
+    "type" : "int"
+  }, {
+    "name" : "tiTaskOffset",
+    "type" : "int"
+  } ]
+}

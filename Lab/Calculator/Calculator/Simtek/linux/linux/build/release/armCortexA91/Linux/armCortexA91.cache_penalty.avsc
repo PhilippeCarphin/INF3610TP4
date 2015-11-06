@@ -1,0 +1,32 @@
+{
+  "type" : "record",
+  "name" : "CachePenalties",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "penalties",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "CachePenalty",
+        "fields" : [ {
+          "name" : "level",
+          "type" : "int"
+        }, {
+          "name" : "type",
+          "type" : {
+            "type" : "enum",
+            "name" : "CachePenaltyType",
+            "symbols" : [ "INST_PENALTY", "DATA_PENALTY", "BOTH_PENALTY" ]
+          }
+        }, {
+          "name" : "read",
+          "type" : "int"
+        }, {
+          "name" : "write",
+          "type" : "int"
+        } ]
+      }
+    }
+  } ]
+}

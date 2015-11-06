@@ -1,0 +1,23 @@
+{
+  "penalties" : [ {
+    "level" : 1,
+    "type" : "INST_PENALTY",
+    "read" : 3,
+    "write" : 3
+  }, {
+    "level" : 1,
+    "type" : "DATA_PENALTY",
+    "read" : 3,
+    "write" : 3
+  }, {
+    "level" : 2,
+    "type" : "BOTH_PENALTY",
+    "read" : 20,
+    "write" : 20
+  }, {
+    "level" : -1,
+    "type" : "BOTH_PENALTY",
+    "read" : 20,
+    "write" : 20
+  } ]
+}

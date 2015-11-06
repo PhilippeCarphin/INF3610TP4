@@ -1,0 +1,12 @@
+{
+  "type" : "record",
+  "name" : "ModuleSlaveAdapterInfo",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "fifos",
+    "type" : {
+      "type" : "array",
+      "items" : "int"
+    }
+  } ]
+}

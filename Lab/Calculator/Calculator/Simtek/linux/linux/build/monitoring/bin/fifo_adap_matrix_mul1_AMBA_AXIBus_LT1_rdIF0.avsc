@@ -1,0 +1,14 @@
+{
+  "type" : "record",
+  "name" : "ModuleSlaveAdapterFIFOInfo",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "triggerType",
+    "type" : {
+      "type" : "enum",
+      "name" : "TriggerType",
+      "namespace" : "com.spacecodesign.s2.domain.analysis.fifo",
+      "symbols" : [ "EDGE", "LEVEL" ]
+    }
+  } ]
+}

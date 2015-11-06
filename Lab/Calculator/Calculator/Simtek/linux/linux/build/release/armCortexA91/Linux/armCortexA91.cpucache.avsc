@@ -1,0 +1,63 @@
+{
+  "type" : "record",
+  "name" : "CPUCachesInfo",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "caches",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "CPUCacheInfo",
+        "fields" : [ {
+          "name" : "level",
+          "type" : "int"
+        }, {
+          "name" : "type",
+          "type" : {
+            "type" : "enum",
+            "name" : "CacheType",
+            "symbols" : [ "INST_CACHE", "DATA_CACHE", "BOTH_CACHE" ]
+          }
+        }, {
+          "name" : "enable",
+          "type" : "boolean"
+        }, {
+          "name" : "cache_size",
+          "type" : "int"
+        }, {
+          "name" : "words_per_cacheline",
+          "type" : "int"
+        }, {
+          "name" : "associativity",
+          "type" : {
+            "type" : "enum",
+            "name" : "Associativity",
+            "symbols" : [ "DIRECT_MAP", "TWO_WAY", "FOUR_WAY", "EIGHT_WAY" ]
+          }
+        }, {
+          "name" : "replacement_policy",
+          "type" : {
+            "type" : "enum",
+            "name" : "ReplacementPolicy",
+            "symbols" : [ "NONE", "LRR", "LRU", "RANDOM" ]
+          }
+        }, {
+          "name" : "write_policy",
+          "type" : {
+            "type" : "enum",
+            "name" : "WritePolicy",
+            "symbols" : [ "WRITE_THROUGH", "WRITE_BACK" ]
+          }
+        }, {
+          "name" : "write_operation",
+          "type" : {
+            "type" : "enum",
+            "name" : "WriteOperation",
+            "symbols" : [ "WRITE_ALLOCATE", "NO_WRITE_ALLOCATE" ]
+          }
+        } ]
+      }
+    }
+  } ]
+}

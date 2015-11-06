@@ -1,0 +1,9 @@
+matrix.o: \
+ c:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/import/src/matrix.cpp \
+ c:\spacecodesign\spacestudio-2.7.0\toolchains\arm-unknown-linux-gnueabi\arm-unknown-linux-gnueabi\sysroot\usr\include\stdc-predef.h \
+ c:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/import/src/matrix.h \
+ c:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/import/src/matrix_def.h
+ /c/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/import/src/matrix.cpp :
+ /c\spacecodesign\spacestudio-2.7.0\toolchains\arm-unknown-linux-gnueabi\arm-unknown-linux-gnueabi\sysroot\usr\include\stdc-predef.h :
+ /c/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/import/src/matrix.h :
+ /c/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/import/src/matrix_def.h :

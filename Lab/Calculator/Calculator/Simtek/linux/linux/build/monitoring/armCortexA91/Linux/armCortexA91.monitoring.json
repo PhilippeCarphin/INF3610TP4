@@ -1,0 +1,8 @@
+{
+  "coreId" : [ 13, 14 ],
+  "swTaskId" : [ 1 ],
+  "idleTask" : 64,
+  "taskSwitchAddress" : 3221283428,
+  "taskPidOffset" : 272,
+  "tiTaskOffset" : 12
+}

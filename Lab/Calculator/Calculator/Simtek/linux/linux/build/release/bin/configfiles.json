@@ -1,0 +1,303 @@
+{
+  "coreConfigFiles" : {
+    "armCortexA91.core0" : {
+      "dataFile" : "armCortexA91.core0.json",
+      "schemaFile" : "armCortexA91.core0.avsc"
+    }
+  },
+  "ModuleSlaveAdapterConfigFiles" : {
+    "adap_adder1_AMBA_AXIBus_LT1_wrIF" : {
+      "dataFile" : "adap_adder1_AMBA_AXIBus_LT1_wrIF.json",
+      "schemaFile" : "adap_adder1_AMBA_AXIBus_LT1_wrIF.avsc"
+    },
+    "adap_adder1_AMBA_AXIBus_LT1_rdIF" : {
+      "dataFile" : "adap_adder1_AMBA_AXIBus_LT1_rdIF.json",
+      "schemaFile" : "adap_adder1_AMBA_AXIBus_LT1_rdIF.avsc"
+    },
+    "adap_divider1_AMBA_AXIBus_LT1_wrIF" : {
+      "dataFile" : "adap_divider1_AMBA_AXIBus_LT1_wrIF.json",
+      "schemaFile" : "adap_divider1_AMBA_AXIBus_LT1_wrIF.avsc"
+    },
+    "adap_divider1_AMBA_AXIBus_LT1_rdIF" : {
+      "dataFile" : "adap_divider1_AMBA_AXIBus_LT1_rdIF.json",
+      "schemaFile" : "adap_divider1_AMBA_AXIBus_LT1_rdIF.avsc"
+    },
+    "adap_input_reader1_AMBA_AXIBus_LT1_rdIF" : {
+      "dataFile" : "adap_input_reader1_AMBA_AXIBus_LT1_rdIF.json",
+      "schemaFile" : "adap_input_reader1_AMBA_AXIBus_LT1_rdIF.avsc"
+    },
+    "adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF" : {
+      "dataFile" : "adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF.json",
+      "schemaFile" : "adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF.avsc"
+    },
+    "adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF" : {
+      "dataFile" : "adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF.json",
+      "schemaFile" : "adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF.avsc"
+    },
+    "adap_multiplier1_AMBA_AXIBus_LT1_wrIF" : {
+      "dataFile" : "adap_multiplier1_AMBA_AXIBus_LT1_wrIF.json",
+      "schemaFile" : "adap_multiplier1_AMBA_AXIBus_LT1_wrIF.avsc"
+    },
+    "adap_multiplier1_AMBA_AXIBus_LT1_rdIF" : {
+      "dataFile" : "adap_multiplier1_AMBA_AXIBus_LT1_rdIF.json",
+      "schemaFile" : "adap_multiplier1_AMBA_AXIBus_LT1_rdIF.avsc"
+    },
+    "adap_output_writer1_AMBA_AXIBus_LT1_wrIF" : {
+      "dataFile" : "adap_output_writer1_AMBA_AXIBus_LT1_wrIF.json",
+      "schemaFile" : "adap_output_writer1_AMBA_AXIBus_LT1_wrIF.avsc"
+    },
+    "adap_subtractor1_AMBA_AXIBus_LT1_wrIF" : {
+      "dataFile" : "adap_subtractor1_AMBA_AXIBus_LT1_wrIF.json",
+      "schemaFile" : "adap_subtractor1_AMBA_AXIBus_LT1_wrIF.avsc"
+    },
+    "adap_subtractor1_AMBA_AXIBus_LT1_rdIF" : {
+      "dataFile" : "adap_subtractor1_AMBA_AXIBus_LT1_rdIF.json",
+      "schemaFile" : "adap_subtractor1_AMBA_AXIBus_LT1_rdIF.avsc"
+    }
+  },
+  "ModuleSlaveAdapterFIFOConfigFiles" : {
+    "fifo_adap_adder1_AMBA_AXIBus_LT1_wrIF0" : {
+      "dataFile" : "fifo_adap_adder1_AMBA_AXIBus_LT1_wrIF0.json",
+      "schemaFile" : "fifo_adap_adder1_AMBA_AXIBus_LT1_wrIF0.avsc"
+    },
+    "fifo_adap_adder1_AMBA_AXIBus_LT1_rdIF0" : {
+      "dataFile" : "fifo_adap_adder1_AMBA_AXIBus_LT1_rdIF0.json",
+      "schemaFile" : "fifo_adap_adder1_AMBA_AXIBus_LT1_rdIF0.avsc"
+    },
+    "fifo_adap_divider1_AMBA_AXIBus_LT1_wrIF0" : {
+      "dataFile" : "fifo_adap_divider1_AMBA_AXIBus_LT1_wrIF0.json",
+      "schemaFile" : "fifo_adap_divider1_AMBA_AXIBus_LT1_wrIF0.avsc"
+    },
+    "fifo_adap_divider1_AMBA_AXIBus_LT1_rdIF0" : {
+      "dataFile" : "fifo_adap_divider1_AMBA_AXIBus_LT1_rdIF0.json",
+      "schemaFile" : "fifo_adap_divider1_AMBA_AXIBus_LT1_rdIF0.avsc"
+    },
+    "fifo_adap_input_reader1_AMBA_AXIBus_LT1_rdIF0" : {
+      "dataFile" : "fifo_adap_input_reader1_AMBA_AXIBus_LT1_rdIF0.json",
+      "schemaFile" : "fifo_adap_input_reader1_AMBA_AXIBus_LT1_rdIF0.avsc"
+    },
+    "fifo_adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF0" : {
+      "dataFile" : "fifo_adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF0.json",
+      "schemaFile" : "fifo_adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF0.avsc"
+    },
+    "fifo_adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF0" : {
+      "dataFile" : "fifo_adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF0.json",
+      "schemaFile" : "fifo_adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF0.avsc"
+    },
+    "fifo_adap_multiplier1_AMBA_AXIBus_LT1_wrIF0" : {
+      "dataFile" : "fifo_adap_multiplier1_AMBA_AXIBus_LT1_wrIF0.json",
+      "schemaFile" : "fifo_adap_multiplier1_AMBA_AXIBus_LT1_wrIF0.avsc"
+    },
+    "fifo_adap_multiplier1_AMBA_AXIBus_LT1_rdIF0" : {
+      "dataFile" : "fifo_adap_multiplier1_AMBA_AXIBus_LT1_rdIF0.json",
+      "schemaFile" : "fifo_adap_multiplier1_AMBA_AXIBus_LT1_rdIF0.avsc"
+    },
+    "fifo_adap_output_writer1_AMBA_AXIBus_LT1_wrIF0" : {
+      "dataFile" : "fifo_adap_output_writer1_AMBA_AXIBus_LT1_wrIF0.json",
+      "schemaFile" : "fifo_adap_output_writer1_AMBA_AXIBus_LT1_wrIF0.avsc"
+    },
+    "fifo_adap_subtractor1_AMBA_AXIBus_LT1_wrIF0" : {
+      "dataFile" : "fifo_adap_subtractor1_AMBA_AXIBus_LT1_wrIF0.json",
+      "schemaFile" : "fifo_adap_subtractor1_AMBA_AXIBus_LT1_wrIF0.avsc"
+    },
+    "fifo_adap_subtractor1_AMBA_AXIBus_LT1_rdIF0" : {
+      "dataFile" : "fifo_adap_subtractor1_AMBA_AXIBus_LT1_rdIF0.json",
+      "schemaFile" : "fifo_adap_subtractor1_AMBA_AXIBus_LT1_rdIF0.avsc"
+    }
+  },
+  "ISSAdapterConfigFiles" : {
+    "ISSAdapter1" : {
+      "dataFile" : "ISSAdapter1.json",
+      "schemaFile" : "ISSAdapter1.avsc"
+    }
+  },
+  "ISSAdapterFIFOConfigFiles" : { },
+  "ModuleRoutingConfigFiles" : {
+    "adder1" : {
+      "dataFile" : "adder1.json",
+      "schemaFile" : "adder1.avsc"
+    },
+    "divider1" : {
+      "dataFile" : "divider1.json",
+      "schemaFile" : "divider1.avsc"
+    },
+    "input_reader1" : {
+      "dataFile" : "input_reader1.json",
+      "schemaFile" : "input_reader1.avsc"
+    },
+    "matrix_mul1" : {
+      "dataFile" : "matrix_mul1.json",
+      "schemaFile" : "matrix_mul1.avsc"
+    },
+    "multiplier1" : {
+      "dataFile" : "multiplier1.json",
+      "schemaFile" : "multiplier1.avsc"
+    },
+    "output_writer1" : {
+      "dataFile" : "output_writer1.json",
+      "schemaFile" : "output_writer1.avsc"
+    },
+    "subtractor1" : {
+      "dataFile" : "subtractor1.json",
+      "schemaFile" : "subtractor1.avsc"
+    }
+  },
+  "AddressRangeConfigFiles" : {
+    "ISSAdapter1_range" : {
+      "dataFile" : "ISSAdapter1_range.json",
+      "schemaFile" : "ISSAdapter1_range.avsc"
+    },
+    "AMBA_AXIBus_LT1_range" : {
+      "dataFile" : "AMBA_AXIBus_LT1_range.json",
+      "schemaFile" : "AMBA_AXIBus_LT1_range.avsc"
+    },
+    "XilinxPIC1_range" : {
+      "dataFile" : "XilinxPIC1_range.json",
+      "schemaFile" : "XilinxPIC1_range.avsc"
+    },
+    "XilinxUART1_range" : {
+      "dataFile" : "XilinxUART1_range.json",
+      "schemaFile" : "XilinxUART1_range.avsc"
+    },
+    "CommandGenerator1_range" : {
+      "dataFile" : "CommandGenerator1_range.json",
+      "schemaFile" : "CommandGenerator1_range.avsc"
+    },
+    "temporizer1_range" : {
+      "dataFile" : "temporizer1_range.json",
+      "schemaFile" : "temporizer1_range.avsc"
+    },
+    "adap_adder1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "adap_adder1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "adap_adder1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "adap_adder1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "adap_adder1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "adap_adder1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "adap_divider1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "adap_divider1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "adap_divider1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "adap_divider1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "adap_divider1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "adap_divider1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "adap_input_reader1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "adap_input_reader1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "adap_input_reader1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "adap_multiplier1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "adap_multiplier1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "adap_multiplier1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "adap_multiplier1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "adap_multiplier1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "adap_multiplier1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "adap_output_writer1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "adap_output_writer1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "adap_output_writer1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "adap_subtractor1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "adap_subtractor1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "adap_subtractor1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "adap_subtractor1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "adap_subtractor1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "adap_subtractor1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "DebugModule1_range" : {
+      "dataFile" : "DebugModule1_range.json",
+      "schemaFile" : "DebugModule1_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_XilinxPIC1_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_XilinxPIC1_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_XilinxPIC1_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_XilinxUART1_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_XilinxUART1_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_XilinxUART1_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_adder1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_adder1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_adder1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_adder1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_adder1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_adder1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_divider1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_divider1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_divider1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_divider1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_divider1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_divider1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_input_reader1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_input_reader1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_input_reader1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_matrix_mul1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_matrix_mul1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_multiplier1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_multiplier1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_multiplier1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_multiplier1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_multiplier1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_multiplier1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_output_writer1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_output_writer1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_output_writer1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_subtractor1_AMBA_AXIBus_LT1_wrIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_subtractor1_AMBA_AXIBus_LT1_wrIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_subtractor1_AMBA_AXIBus_LT1_wrIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_adap_subtractor1_AMBA_AXIBus_LT1_rdIF_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_adap_subtractor1_AMBA_AXIBus_LT1_rdIF_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_adap_subtractor1_AMBA_AXIBus_LT1_rdIF_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_ISSAdapter1_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_ISSAdapter1_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_ISSAdapter1_range.avsc"
+    },
+    "S_AMBA_AXIBus_LT1_DebugModule1_range" : {
+      "dataFile" : "S_AMBA_AXIBus_LT1_DebugModule1_range.json",
+      "schemaFile" : "S_AMBA_AXIBus_LT1_DebugModule1_range.avsc"
+    }
+  },
+  "ProcessorMemoriesFiles" : { },
+  "ProcessorDebuggingFiles" : {
+    "armCortexA91.debug" : {
+      "dataFile" : "armCortexA91.debug.json",
+      "schemaFile" : "armCortexA91.debug.avsc"
+    }
+  },
+  "WindowBridgeConfigFiles" : { },
+  "CPUCacheConfigFiles" : {
+    "armCortexA91.cpucache" : {
+      "dataFile" : "armCortexA91.cpucache.json",
+      "schemaFile" : "armCortexA91.cpucache.avsc"
+    }
+  },
+  "LinuxMonitoringFiles" : { },
+  "CachePenaltyFiles" : { }
+}

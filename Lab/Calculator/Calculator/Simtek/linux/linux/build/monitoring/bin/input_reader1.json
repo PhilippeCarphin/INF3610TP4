@@ -1,0 +1,9 @@
+{
+  "ModuleRead" : [ ],
+  "ModuleWrite" : [ {
+    "id" : 1,
+    "index" : 0
+  } ],
+  "RegisterWrite" : [ ],
+  "RegisterRead" : [ ]
+}

@@ -1,0 +1,12 @@
+{
+  "type" : "record",
+  "name" : "AddressRangeInfo",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "BaseAddress",
+    "type" : "long"
+  }, {
+    "name" : "HighAddress",
+    "type" : "long"
+  } ]
+}

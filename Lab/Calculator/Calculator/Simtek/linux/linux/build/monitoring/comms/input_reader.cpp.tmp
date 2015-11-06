@@ -1,0 +1,441 @@
+# 1 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp"
+# 1 "<command-line>"
+# 1 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp"
+// ***********************************************************************
+//
+// Filename : input_reader.cpp
+//
+// Author : SpaceStudio generation engine
+//
+// Creation date : Wed Oct 17 10:52:30 EDT 2012
+//
+//
+// ***********************************************************************
+#include "input_reader.h"
+# 11 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp"
+# 1 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.h" 1
+// ***********************************************************************
+//
+// Filename : input_reader.h
+//
+// Author : SpaceStudio generation engine
+//
+// Creation date : Wed Oct 17 10:52:30 EDT 2012
+//
+//
+// ***********************************************************************
+
+
+
+#include "systemc.h"
+# 14 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.h"
+# 1 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceStudio/src/main/resources/a/ck/headers/hw/systemc.h" 1
+
+
+
+#include "systemc"
+# 4 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceStudio/src/main/resources/a/ck/headers/hw/systemc.h"
+# 1 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceStudio/src/main/resources/a/ck/headers/hw/systemc" 1
+
+
+
+// Nothing from SystemC proper
+namespace sc_core {
+}
+
+// SystemC typedefs
+namespace sc_dt {
+}
+# 5 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceStudio/src/main/resources/a/ck/headers/hw/systemc.h" 2
+
+// Using declarations in the C++ standard library, as specified in IEEE 1666-2011, section 5.1.2
+namespace std {}
+using std::ios;
+using std::streambuf;
+using std::streampos;
+using std::streamsize;
+using std::iostream;
+using std::istream;
+using std::ostream;
+using std::cin;
+using std::cout;
+using std::cerr;
+using std::endl;
+using std::flush;
+using std::dec;
+using std::hex;
+using std::oct;
+using std::fstream;
+using std::ifstream;
+using std::ofstream;
+using std::size_t;
+using std::memchr;
+using std::memcmp;
+using std::memcpy;
+using std::memmove;
+using std::memset;
+using std::strcat;
+using std::strncat;
+using std::strchr;
+using std::strrchr;
+using std::strcmp;
+using std::strncmp;
+using std::strcpy;
+using std::strncpy;
+using std::strcspn;
+using std::strspn;
+using std::strlen;
+using std::strpbrk;
+using std::strstr;
+using std::strtok;
+# 15 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.h" 2
+#include "SpaceBaseModule.h"
+# 15 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.h"
+# 1 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceStudio/src/main/resources/a/ck/headers/hw/SpaceBaseModule.h" 1
+
+
+
+#include "SpaceTypes.h"
+# 4 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceStudio/src/main/resources/a/ck/headers/hw/SpaceBaseModule.h"
+# 1 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/SpaceTypes.h" 1
+///////////////////////////////////////////////////////////////////////////////
+///
+///         Space Libraries - Space Codesign Systems Inc. (http://www.spacecodesign.com)
+///         (c) All Rights Reserved. 2005-2014                            
+///                                                                       
+///         This file contains proprietary, confidential information of Space Codesign 
+///         Systems Inc. and may be used only pursuant to the terms of a valid license 
+///         agreement with Space Codesign Systems Inc. For more information about licensing,
+///         please contact your Space Codesign representative. 
+/// 
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+///\class     SPACE_STATUS
+///
+///\brief     Status returned by the Space Codesign engined for end users
+///
+///////////////////////////////////////////////////////////////////////////////
+static const unsigned char SPACE_OK = 0; ///< Tells the operation was completed successfully
+static const unsigned char SPACE_ERROR = 1; ///< Tells the operation did not complete and simulation 
+static const unsigned char SPACE_EMPTY = 2; ///< may be corrupted or may fail
+static const unsigned char SPACE_FULL = 3; ///> Tells the operation cannot be completed because no storage is available
+static const unsigned char SPACE_NOT_CONNECTED = 99; ///< REports an access to an unconnected port
+
+typedef unsigned char eSpaceStatus;
+
+
+///////////////////////////////////////////////////////////////////////////////
+///\enum     SpaceChannelStatusStr
+///
+///\brief    Statuses returned when using Space Interface Methods
+///////////////////////////////////////////////////////////////////////////////
+typedef enum
+{
+/**** for platform ****/
+ SPACE_CHANNEL_OK = 0, // Was successfully completed from end to end
+ SPACE_CHANNEL_FULL = 1, // Channel is FULL and write operation was cancelled
+ SPACE_CHANNEL_EMPTY = 2, // Nothing to read and data pointer is invalid
+ SPACE_CHANNEL_UNUSED_STATUS_1 = 3, // Currently unused status code
+
+ SPACE_CHANNEL_UNUSED_STATUS_2 = 4, // Currently unused status code
+    SPACE_CHANNEL_ADDR_OUT_OF_RANGE = 5, // Destination Address was out of range
+
+ SPACE_CHANNEL_ERROR = 6, // An unrecoverable error from which the system cannot recover occured
+          // Users receiving this error are recommended to stop the simulation
+ SPACE_CHANNEL_TERMINATOR_ACCESS = 7, // An unbound port was accessed. 
+          // Users receiving this error are recommended to stop the simulation
+
+    SPACE_CHANNEL_MSG_SIZE_ERROR = 8, // Platform: Unsupported Size of Request
+    SPACE_CHANNEL_NO_QUEUE_AVAILABLE = 9, // SW:No queue available in FreeQueuePool (in the case of writing)
+ SPACE_CHANNEL_UNUSED_STATUS_4 = 10, // Currently unused status code
+
+ /**** for RTL ****/
+ SPACE_CHANNEL_IN_PROGRESS = 11, // Request currently being processed
+
+
+/**** NEW ****/
+
+ SPACE_UNKNOWN_DESTINATION = 12,
+ SPACE_INVALID_OFFSET = 13
+
+
+} eSpaceChannelStatus;
+
+
+///////////////////////////////////////////////////////////////////////////////
+///\enum     eSpaceTransactionType
+///
+///\brief    SPACE Transaction options. 
+///\note     Updated with unsigned long type. 
+///////////////////////////////////////////////////////////////////////////////
+static const unsigned long SPACE_NON_BLOCKING = 0; ///< Indicates the transaction is non blocking
+static const unsigned long SPACE_NO_WAIT = 0;
+static const unsigned long SPACE_BLOCKING = 0xFFFFFFFF; ///< Indicates the transaction is blocking
+static const unsigned long SPACE_WAIT_FOREVER = 0xFFFFFFFF;
+
+typedef unsigned long eSpaceTransactionType;
+
+
+///////////////////////////////////////////////////////////////////////////////
+///\class     enum eSpaceComponentType
+///
+///\brief     Descriptor found in eSpaceComponentType representing either
+///           a module or a device 
+///////////////////////////////////////////////////////////////////////////////
+typedef enum
+{
+    SPACE_UNREGISTERED = 0,
+    SPACE_MODULE = 1,
+    SPACE_DEVICE = 2,
+    //SPACE_MODULE_ADAPTER = 3,
+ SPACE_ISS_ADAPTER = 4,
+ SPACE_REGISTER_FILE = 5,
+ SPACE_SLAVE_BRIDGE = 6
+} eSpaceComponentType;
+
+
+///////////////////////////////////////////////////////////////////////////////
+///\enum      eSpaceCommunicationType
+///
+///\brief      SPACE communication types
+///////////////////////////////////////////////////////////////////////////////
+typedef enum
+{
+ SPACE_MODULE_READ = 0,
+ SPACE_MODULE_WRITE = 1,
+ SPACE_DEVICE_READ = 2,
+ SPACE_DEVICE_WRITE = 3,
+ SPACE_REGISTER_READ = 4,
+ SPACE_REGISTER_WRITE = 5,
+ SPACE_UNKNOWN_COMMUNICATION = 0xFF
+} eSpaceCommunicationType;
+
+
+
+/* (c) Space Codesign Systems Inc. 2005-2014 */
+# 5 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceStudio/src/main/resources/a/ck/headers/hw/SpaceBaseModule.h" 2
+
+#include "systemc"
+
+class SpaceBaseModule;
+# 16 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.h" 2
+
+class input_reader : public SpaceBaseModule
+{
+ public:
+
+  SC_HAS_PROCESS(input_reader);
+
+  ///
+  /// Constructor
+  ///
+  input_reader(sc_module_name zName, double dClockPeriod, sc_time_unit Unit, unsigned char ucID, unsigned char ucPriority, bool bVerbose);
+
+  ///
+  /// Methods
+  ///
+  void thread(void);
+
+ private:
+
+  ///
+  /// Methods
+  ///
+  unsigned long readUART();
+  void send2FIFO(unsigned long data);
+};
+# 12 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp" 2
+#include "PlatformDefinitions.h"
+# 12 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp"
+# 1 "temp/PlatformDefinitions.h" 1
+// ***********************************************************************
+//
+// Filename: 		PlatformDefinitions.h
+//
+// Level:			Simtek
+//
+// Author: 			SpaceStudio generation engine
+//
+// Warning: 
+// ========
+//			1) This file content will be overwritten by the next generation process.
+//			2) All the ID must be unique to the current project.
+//
+// ***********************************************************************
+
+
+
+
+//Level of technology of this platform
+
+
+// User's Module ID
+# 32 "temp/PlatformDefinitions.h"
+// User's Device(and Wrapper) ID
+
+
+
+// User's Module priority
+# 46 "temp/PlatformDefinitions.h"
+// User's Device(and Wrapper) priority
+
+// SpaceComponents IDs
+# 62 "temp/PlatformDefinitions.h"
+// SpaceComponents PRIOs
+# 13 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp" 2
+#include "ApplicationDefinitions.h"
+# 13 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp"
+# 1 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/application/ApplicationDefinitions.h" 1
+
+// ***********************************************************************
+//
+// Filename: 		ApplicationDefinitions.h
+//
+// Author: 			SpaceStudio generation engine
+//
+// Creation date: 	Wed Oct 17 09:37:35 EDT 2012
+//
+// Warning: 		This file will not be overwritten by the SpaceStudio 
+//					generation engine.
+//
+// Note:			This file is automatically added in a new project or in an 
+//					existing project only if this file is not already present.
+//					Otherwise, this file remains untouched by the SpaceStudio 
+//					generation engine.  So this is a good place to declare 
+//					variables that are specific to your application and that 
+//					you need to share between your configurations.
+//
+// ***********************************************************************
+
+
+
+
+//Add your definitions here
+# 14 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp" 2
+#include "SpaceDisplay.h"
+# 14 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp"
+# 1 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceStudio/src/main/resources/a/ck/headers/hw/SpaceDisplay.h" 1
+
+
+
+// Nothing
+# 15 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp" 2
+#include "SpaceTypes.h"
+# 15 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp"
+# 1 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/SpaceTypes.h" 1
+///////////////////////////////////////////////////////////////////////////////
+///
+///         Space Libraries - Space Codesign Systems Inc. (http://www.spacecodesign.com)
+///         (c) All Rights Reserved. 2005-2014                            
+///                                                                       
+///         This file contains proprietary, confidential information of Space Codesign 
+///         Systems Inc. and may be used only pursuant to the terms of a valid license 
+///         agreement with Space Codesign Systems Inc. For more information about licensing,
+///         please contact your Space Codesign representative. 
+/// 
+///////////////////////////////////////////////////////////////////////////////
+# 119 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/SpaceTypes.h"
+/* (c) Space Codesign Systems Inc. 2005-2014 */
+# 16 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp" 2
+
+
+
+#include "XilinxUARTRegisters.h"
+# 19 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp"
+# 1 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/XilinxUARTRegisters.h" 1
+///////////////////////////////////////////////////////////////////////////////
+///\\file     UARTRegisters.h
+///\\brief    Describes registers used in the UART software driver
+///
+///         Space Libraries - Space Codesign Systems Inc. (http://www.spacecodesign.com)
+///         (c) All Rights Reserved. 2005-2014                            
+///                                                                       
+///         This file contains proprietary, confidential information of Space Codesign 
+///         Systems Inc. and may be used only pursuant to the terms of a valid license 
+///         agreement with Space Codesign Systems Inc. For more information about licensing,
+///         please contact your Space Codesign representative. 
+/// 
+///////////////////////////////////////////////////////////////////////////////
+# 26 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/XilinxUARTRegisters.h"
+///////////////////////////////////////////////////////////////////////////////
+///
+///\brief     CONSTANT DEFINITIONS
+///
+///////////////////////////////////////////////////////////////////////////////
+// Status register
+
+
+
+
+
+
+//Control Register
+# 47 "C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/XilinxUARTRegisters.h"
+/* (c) Space Codesign Systems Inc. 2005-2014 */
+# 20 "C:/Users/Arnaud/Desktop/Lab/Lab/Calculator/Calculator/src/module/input_reader.cpp" 2
+
+
+//////////////////////////////////////////////////////////////////////////////
+///
+///	Constructor
+///
+//////////////////////////////////////////////////////////////////////////////
+input_reader::input_reader(sc_module_name zName, double dClockPeriod, sc_time_unit ClockPeriodUnit, unsigned char ucID, unsigned char ucPriority, bool bVerbose)
+: SpaceBaseModule( zName, dClockPeriod, ClockPeriodUnit, ucID, ucPriority, bVerbose )
+{
+ SC_THREAD(thread);
+}
+
+//////////////////////////////////////////////////////////////////////////////
+///
+///	Convert UART to FIFO
+///
+//////////////////////////////////////////////////////////////////////////////
+void input_reader::thread(void)
+{
+ while(1)
+ {
+  send2FIFO(readUART());
+ }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////
+///
+///	Read a character from the uart
+///
+//////////////////////////////////////////////////////////////////////////////
+unsigned long input_reader::readUART()
+{
+
+
+
+
+ unsigned long status;
+ unsigned long data;
+
+ DeviceRead(8, 0x00000008ul /*|< Status Register*/, &status);
+ while((status & 0x01 /*|< bit 31 : indicates if receive FIFO contains a valid data*/)==0)
+ {
+  wait(1);
+  DeviceRead(8, 0x00000008ul /*|< Status Register*/,&status);
+ }
+ DeviceRead(8, 0x00000000ul /*|< Receive FIFO*/, &data);
+
+ return data;
+
+}
+
+//////////////////////////////////////////////////////////////////////////////
+///
+///	Send data to fifo
+///
+//////////////////////////////////////////////////////////////////////////////
+void input_reader::send2FIFO(unsigned long data)
+{
+ ModuleWrite(1, SPACE_BLOCKING, &data);
+}

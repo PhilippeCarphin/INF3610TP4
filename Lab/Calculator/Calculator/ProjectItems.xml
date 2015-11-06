@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project name="Calculator" version="270" xmlns="http://www.spacecodesign.com/schemas/2.7/ProjectItems.xsd">
+    <files>
+        <file name="matrix.c" type="SOURCE"/>
+        <file name="matrix.h" type="HEADER"/>
+        <file name="matrix_def.h" type="HEADER"/>
+        <file name="xil_assert.c" type="SOURCE"/>
+        <file name="xil_assert.h" type="HEADER"/>
+        <file name="xil_io.c" type="SOURCE"/>
+        <file name="xil_io.h" type="HEADER"/>
+        <file name="xil_types.h" type="HEADER"/>
+        <file name="xuartps_hw.c" type="SOURCE"/>
+        <file name="xuartps_hw.h" type="HEADER"/>
+    </files>
+    <libraries/>
+    <usermodules>
+        <usermodule name="controller">
+            <filerefs>
+                <fileref name="matrix.c"/>
+                <fileref name="matrix.h"/>
+                <fileref name="matrix_def.h"/>
+            </filerefs>
+            <libraryrefs/>
+        </usermodule>
+        <usermodule name="input_reader">
+            <filerefs>
+                <fileref name="xil_assert.c"/>
+                <fileref name="xil_assert.h"/>
+                <fileref name="xil_io.c"/>
+                <fileref name="xil_io.h"/>
+                <fileref name="xil_types.h"/>
+                <fileref name="xuartps_hw.c"/>
+                <fileref name="xuartps_hw.h"/>
+            </filerefs>
+            <libraryrefs/>
+        </usermodule>
+        <usermodule name="output_writer">
+            <filerefs>
+                <fileref name="xil_assert.c"/>
+                <fileref name="xil_assert.h"/>
+                <fileref name="xil_io.c"/>
+                <fileref name="xil_io.h"/>
+                <fileref name="xil_types.h"/>
+                <fileref name="xuartps_hw.c"/>
+                <fileref name="xuartps_hw.h"/>
+            </filerefs>
+            <libraryrefs/>
+        </usermodule>
+        <usermodule name="multiplier">
+            <filerefs/>
+            <libraryrefs/>
+        </usermodule>
+        <usermodule name="divider">
+            <filerefs/>
+            <libraryrefs/>
+        </usermodule>
+        <usermodule name="adder">
+            <filerefs/>
+            <libraryrefs/>
+        </usermodule>
+        <usermodule name="subtractor">
+            <filerefs/>
+            <libraryrefs/>
+        </usermodule>
+    </usermodules>
+    <userdevices>
+        <userdevice name="temporizer" type="SLAVE">
+            <filerefs/>
+            <libraryrefs/>
+        </userdevice>
+        <userdevice name="CommandGenerator" type="SLAVE">
+            <filerefs/>
+            <libraryrefs/>
+        </userdevice>
+    </userdevices>
+</project>

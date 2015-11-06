@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+********************************************************************************
+
+	Author : SpaceStudio generation engine
+
+	Warning: This file content will be overwritten by the configuration manager.
+
+********************************************************************************
+ -->
+<project
+	name="Calculator"
+	level="Elix"
+	ConfigName="UTF"
+	SpaceStudioVersion="270">
+
+	<InstanceList>
+		<component
+			type="Bus"
+			SubType="UTFChannel"
+			InstanceName="UTFChannel1"
+			id_key="UTFCHANNEL1_ID"
+			id="10"
+			uiChannelWidth="ChannelWidthInfinite"
+			verbose="false"
+			ptrAddress="0"
+			ulBaseAddress="0x0"
+			ulHighAddress="0xFFFFFFFF"
+			isFixRange="true"
+			ulMaxComponentSize="0x100000000"
+			ulMinComponentSize="0x100">
+		</component>
+
+		<component
+			type="ExternalIOSlave"
+			SubType="UserDeviceExternalIOSlave"
+			InstanceName="UserDeviceExternalIOSlave1"
+			id="11"
+			id_key="USERDEVICEEXTERNALIOSLAVE1_ID"
+			verbose="false">
+		</component>
+
+		<component
+			type="ExternalIOSlave"
+			SubType="UserDeviceExternalIOSlave"
+			InstanceName="UserDeviceExternalIOSlave2"
+			id="9"
+			id_key="USERDEVICEEXTERNALIOSLAVE2_ID"
+			verbose="false">
+
+			<RequisiteFor
+				id="uart.io"
+				type="Serial"
+				SubType="XilinxUART"
+				InstanceName="XilinxUART1">
+			</RequisiteFor>
+
+		</component>
+
+		<component
+			type="Module"
+			SubType="STANDARD"
+			ClassName="adder"
+			InstanceName="adder1"
+			HeaderFileName="Undefined"
+			id_key="ADDER_ID"
+			id="0"
+			prio_key="ADDER_PRIO"
+			prio="1"
+			verbose="false"
+			SystemClock="SysClock"
+			InterfaceClock="None">
+		</component>
+
+		<component
+			type="Module"
+			SubType="STANDARD"
+			ClassName="divider"
+			InstanceName="divider1"
+			HeaderFileName="Undefined"
+			id_key="DIVIDER_ID"
+			id="2"
+			prio_key="DIVIDER_PRIO"
+			prio="3"
+			verbose="false"
+			SystemClock="SysClock"
+			InterfaceClock="None">
+		</component>
+
+		<component
+			type="Module"
+			SubType="STANDARD"
+			ClassName="input_reader"
+			InstanceName="input_reader1"
+			HeaderFileName="Undefined"
+			id_key="INPUT_READER_ID"
+			id="3"
+			prio_key="INPUT_READER_PRIO"
+			prio="4"
+			verbose="false"
+			SystemClock="SysClock"
+			InterfaceClock="None">
+		</component>
+
+		<component
+			type="Module"
+			SubType="STANDARD"
+			ClassName="multiplier"
+			InstanceName="multiplier1"
+			HeaderFileName="Undefined"
+			id_key="MULTIPLIER_ID"
+			id="5"
+			prio_key="MULTIPLIER_PRIO"
+			prio="6"
+			verbose="false"
+			SystemClock="SysClock"
+			InterfaceClock="None">
+		</component>
+
+		<component
+			type="Module"
+			SubType="STANDARD"
+			ClassName="output_writer"
+			InstanceName="output_writer1"
+			HeaderFileName="Undefined"
+			id_key="OUTPUT_WRITER_ID"
+			id="6"
+			prio_key="OUTPUT_WRITER_PRIO"
+			prio="7"
+			verbose="false"
+			SystemClock="SysClock"
+			InterfaceClock="None">
+		</component>
+
+		<component
+			type="Module"
+			SubType="STANDARD"
+			ClassName="subtractor"
+			InstanceName="subtractor1"
+			HeaderFileName="Undefined"
+			id_key="SUBTRACTOR_ID"
+			id="7"
+			prio_key="SUBTRACTOR_PRIO"
+			prio="8"
+			verbose="false"
+			SystemClock="SysClock"
+			InterfaceClock="None">
+		</component>
+
+		<component
+			type="Serial"
+			SubType="XilinxUART"
+			InstanceName="XilinxUART1"
+			BaudRate="57600"
+			id_key="UART_ID"
+			id="8"
+			InterruptMode="false"
+			SimulateCommDelay="false"
+			verbose="false"
+			ulMinAddressRange="0x100"
+			ulBaseAddress="0x00000000"
+			ulHighAddress="0x000000FF"
+			isFixRange="false"
+			parity="RS232_NO_PARITY"
+			data_bits="8"
+			bTxFIFOLastByteOverwriting="false">
+		</component>
+
+		<signal
+			type="Signal"
+			SubType="sc_clock"
+			InstanceName="SysClock"
+			DutyCycle="0.5"
+			Period="10"
+			PeriodTimeUnit="SC_NS">
+		</signal>
+
+		<component
+			type="UserDevice"
+			SubType="UserDeviceSlave"
+			ClassName="CommandGenerator"
+			InstanceName="CommandGenerator1"
+			id_key="COMMANDGENERATOR_ID"
+			id="12"
+			verbose="false"
+			deviceType="SLAVE"
+			ulMinAddressRange="0x1000000"
+			ulBaseAddress="0x00000000"
+			ulHighAddress="0x00000000"
+			isFixRange="false">
+		</component>
+
+		<component
+			type="UserDevice"
+			SubType="UserDeviceSlave"
+			ClassName="temporizer"
+			InstanceName="temporizer1"
+			id_key="TEMPORIZER_ID"
+			id="13"
+			verbose="false"
+			deviceType="SLAVE"
+			ulMinAddressRange="0x1000000"
+			ulBaseAddress="0x00000000"
+			ulHighAddress="0x00000000"
+			isFixRange="false">
+		</component>
+
+		<component
+			type="Module"
+			SubType="STANDARD"
+			ClassName="controller"
+			InstanceName="controller1"
+			HeaderFileName="Undefined"
+			id_key="CONTROLLER_ID"
+			id="1"
+			prio_key="CONTROLLER_PRIO"
+			prio="2"
+			verbose="false"
+			SystemClock="SysClock"
+			InterfaceClock="None">
+		</component>
+
+
+	</InstanceList>
+	
+	<Binding>
+
+		<ComponentLevel>
+
+			<component
+				type="Bus"
+				SubType="UTFChannel"
+				InstanceName="UTFChannel1">
+
+				
+				<component
+					type="Module"
+					SubType="STANDARD"
+					ClassName="adder"
+					InstanceName="adder1">
+
+				</component>
+
+				<component
+					type="Module"
+					SubType="STANDARD"
+					ClassName="divider"
+					InstanceName="divider1">
+
+				</component>
+
+				<component
+					type="Module"
+					SubType="STANDARD"
+					ClassName="input_reader"
+					InstanceName="input_reader1">
+
+				</component>
+
+				<component
+					type="Module"
+					SubType="STANDARD"
+					ClassName="multiplier"
+					InstanceName="multiplier1">
+
+				</component>
+
+				<component
+					type="Module"
+					SubType="STANDARD"
+					ClassName="output_writer"
+					InstanceName="output_writer1">
+
+				</component>
+
+				<component
+					type="Module"
+					SubType="STANDARD"
+					ClassName="subtractor"
+					InstanceName="subtractor1">
+
+				</component>
+
+				<component
+					type="Serial"
+					SubType="XilinxUART"
+					InstanceName="XilinxUART1">
+
+					<component
+						type="ExternalIOSlave"
+						SubType="UserDeviceExternalIOSlave"
+						InstanceName="UserDeviceExternalIOSlave2">
+
+						<component
+							type="UserDevice"
+							SubType="UserDeviceSlave"
+							ClassName="CommandGenerator"
+							InstanceName="CommandGenerator1">
+
+							<component
+								type="ExternalIOSlave"
+								SubType="UserDeviceExternalIOSlave"
+								InstanceName="UserDeviceExternalIOSlave1">
+
+								<component
+									type="UserDevice"
+									SubType="UserDeviceSlave"
+									ClassName="temporizer"
+									InstanceName="temporizer1">
+
+								</component>
+
+							</component>
+
+						</component>
+
+					</component>
+
+				</component>
+
+				<component
+					type="Module"
+					SubType="STANDARD"
+					ClassName="controller"
+					InstanceName="controller1">
+
+				</component>
+
+
+			</component>
+
+			<component
+				type="ExternalIOSlave"
+				SubType="UserDeviceExternalIOSlave"
+				InstanceName="UserDeviceExternalIOSlave1">
+
+				
+				<component
+					type="UserDevice"
+					SubType="UserDeviceSlave"
+					ClassName="temporizer"
+					InstanceName="temporizer1">
+
+				</component>
+
+
+			</component>
+
+			<component
+				type="ExternalIOSlave"
+				SubType="UserDeviceExternalIOSlave"
+				InstanceName="UserDeviceExternalIOSlave2">
+
+				
+				<component
+					type="UserDevice"
+					SubType="UserDeviceSlave"
+					ClassName="CommandGenerator"
+					InstanceName="CommandGenerator1">
+
+					<component
+						type="ExternalIOSlave"
+						SubType="UserDeviceExternalIOSlave"
+						InstanceName="UserDeviceExternalIOSlave1">
+
+						<component
+							type="UserDevice"
+							SubType="UserDeviceSlave"
+							ClassName="temporizer"
+							InstanceName="temporizer1">
+
+						</component>
+
+					</component>
+
+				</component>
+
+
+			</component>
+
+			<component
+				type="Module"
+				SubType="STANDARD"
+				ClassName="adder"
+				InstanceName="adder1">
+
+
+			</component>
+
+			<component
+				type="Module"
+				SubType="STANDARD"
+				ClassName="divider"
+				InstanceName="divider1">
+
+
+			</component>
+
+			<component
+				type="Module"
+				SubType="STANDARD"
+				ClassName="input_reader"
+				InstanceName="input_reader1">
+
+
+			</component>
+
+			<component
+				type="Module"
+				SubType="STANDARD"
+				ClassName="multiplier"
+				InstanceName="multiplier1">
+
+
+			</component>
+
+			<component
+				type="Module"
+				SubType="STANDARD"
+				ClassName="output_writer"
+				InstanceName="output_writer1">
+
+
+			</component>
+
+			<component
+				type="Module"
+				SubType="STANDARD"
+				ClassName="subtractor"
+				InstanceName="subtractor1">
+
+
+			</component>
+
+			<component
+				type="Serial"
+				SubType="XilinxUART"
+				InstanceName="XilinxUART1">
+
+				
+				<component
+					type="ExternalIOSlave"
+					SubType="UserDeviceExternalIOSlave"
+					InstanceName="UserDeviceExternalIOSlave2">
+
+					<component
+						type="UserDevice"
+						SubType="UserDeviceSlave"
+						ClassName="CommandGenerator"
+						InstanceName="CommandGenerator1">
+
+						<component
+							type="ExternalIOSlave"
+							SubType="UserDeviceExternalIOSlave"
+							InstanceName="UserDeviceExternalIOSlave1">
+
+							<component
+								type="UserDevice"
+								SubType="UserDeviceSlave"
+								ClassName="temporizer"
+								InstanceName="temporizer1">
+
+							</component>
+
+						</component>
+
+					</component>
+
+				</component>
+
+
+			</component>
+
+			<component
+				type="UserDevice"
+				SubType="UserDeviceSlave"
+				ClassName="CommandGenerator"
+				InstanceName="CommandGenerator1">
+
+				
+				<component
+					type="ExternalIOSlave"
+					SubType="UserDeviceExternalIOSlave"
+					InstanceName="UserDeviceExternalIOSlave1">
+
+					<component
+						type="UserDevice"
+						SubType="UserDeviceSlave"
+						ClassName="temporizer"
+						InstanceName="temporizer1">
+
+					</component>
+
+				</component>
+
+
+			</component>
+
+			<component
+				type="UserDevice"
+				SubType="UserDeviceSlave"
+				ClassName="temporizer"
+				InstanceName="temporizer1">
+
+
+			</component>
+
+			<component
+				type="Module"
+				SubType="STANDARD"
+				ClassName="controller"
+				InstanceName="controller1">
+
+
+			</component>
+
+
+		</ComponentLevel>
+
+	</Binding>
+
+</project>

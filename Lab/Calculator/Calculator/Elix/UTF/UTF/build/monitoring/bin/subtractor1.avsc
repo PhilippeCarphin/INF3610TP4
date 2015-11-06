@@ -1,0 +1,41 @@
+{
+  "type" : "record",
+  "name" : "ModuleRoutingInfo",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "ModuleRead",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "RoutingInfo",
+        "namespace" : "com.spacecodesign.s2.domain.analysis.routing",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "int"
+        }, {
+          "name" : "index",
+          "type" : "int"
+        } ]
+      }
+    }
+  }, {
+    "name" : "ModuleWrite",
+    "type" : {
+      "type" : "array",
+      "items" : "com.spacecodesign.s2.domain.analysis.routing.RoutingInfo"
+    }
+  }, {
+    "name" : "RegisterWrite",
+    "type" : {
+      "type" : "array",
+      "items" : "com.spacecodesign.s2.domain.analysis.routing.RoutingInfo"
+    }
+  }, {
+    "name" : "RegisterRead",
+    "type" : {
+      "type" : "array",
+      "items" : "com.spacecodesign.s2.domain.analysis.routing.RoutingInfo"
+    }
+  } ]
+}

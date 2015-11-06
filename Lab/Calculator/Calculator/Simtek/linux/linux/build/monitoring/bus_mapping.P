@@ -1,0 +1,10 @@
+bus_mapping.o: bus_mapping.cpp bus_mapping.h \
+ C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/SpaceGlobalMap.h \
+ C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/SpaceTypes.h \
+ C:/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/tlm_endianness.h \
+ C:/SpaceCodesign/SpaceStudio-2.7.0/SystemC/include/tlm_core/tlm_2/tlm_generic_payload/tlm_helpers.h
+bus_mapping.cpp bus_mapping.h :
+ /C/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/SpaceGlobalMap.h :
+ /C/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/SpaceTypes.h :
+ /C/SpaceCodesign/SpaceStudio-2.7.0/SpaceLib/release/hw/include/tlm_endianness.h :
+ /C/SpaceCodesign/SpaceStudio-2.7.0/SystemC/include/tlm_core/tlm_2/tlm_generic_payload/tlm_helpers.h :

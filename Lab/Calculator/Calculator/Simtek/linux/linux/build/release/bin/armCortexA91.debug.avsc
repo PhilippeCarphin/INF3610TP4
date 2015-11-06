@@ -1,0 +1,9 @@
+{
+  "type" : "record",
+  "name" : "ProcessorDebugging",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "DebugReadyFileName",
+    "type" : "string"
+  } ]
+}

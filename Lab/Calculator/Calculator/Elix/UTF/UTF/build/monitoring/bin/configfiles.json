@@ -1,0 +1,69 @@
+{
+  "coreConfigFiles" : { },
+  "ModuleSlaveAdapterConfigFiles" : { },
+  "ModuleSlaveAdapterFIFOConfigFiles" : { },
+  "ISSAdapterConfigFiles" : { },
+  "ISSAdapterFIFOConfigFiles" : { },
+  "ModuleRoutingConfigFiles" : {
+    "adder1" : {
+      "dataFile" : "adder1.json",
+      "schemaFile" : "adder1.avsc"
+    },
+    "controller1" : {
+      "dataFile" : "controller1.json",
+      "schemaFile" : "controller1.avsc"
+    },
+    "divider1" : {
+      "dataFile" : "divider1.json",
+      "schemaFile" : "divider1.avsc"
+    },
+    "input_reader1" : {
+      "dataFile" : "input_reader1.json",
+      "schemaFile" : "input_reader1.avsc"
+    },
+    "matrix_mul1" : {
+      "dataFile" : "matrix_mul1.json",
+      "schemaFile" : "matrix_mul1.avsc"
+    },
+    "multiplier1" : {
+      "dataFile" : "multiplier1.json",
+      "schemaFile" : "multiplier1.avsc"
+    },
+    "output_writer1" : {
+      "dataFile" : "output_writer1.json",
+      "schemaFile" : "output_writer1.avsc"
+    },
+    "subtractor1" : {
+      "dataFile" : "subtractor1.json",
+      "schemaFile" : "subtractor1.avsc"
+    }
+  },
+  "AddressRangeConfigFiles" : {
+    "UTFChannel1_range" : {
+      "dataFile" : "UTFChannel1_range.json",
+      "schemaFile" : "UTFChannel1_range.avsc"
+    },
+    "XilinxUART1_range" : {
+      "dataFile" : "XilinxUART1_range.json",
+      "schemaFile" : "XilinxUART1_range.avsc"
+    },
+    "CommandGenerator1_range" : {
+      "dataFile" : "CommandGenerator1_range.json",
+      "schemaFile" : "CommandGenerator1_range.avsc"
+    },
+    "temporizer1_range" : {
+      "dataFile" : "temporizer1_range.json",
+      "schemaFile" : "temporizer1_range.avsc"
+    },
+    "S_UTFChannel1_XilinxUART1_range" : {
+      "dataFile" : "S_UTFChannel1_XilinxUART1_range.json",
+      "schemaFile" : "S_UTFChannel1_XilinxUART1_range.avsc"
+    }
+  },
+  "ProcessorMemoriesFiles" : { },
+  "ProcessorDebuggingFiles" : { },
+  "WindowBridgeConfigFiles" : { },
+  "CPUCacheConfigFiles" : { },
+  "LinuxMonitoringFiles" : { },
+  "CachePenaltyFiles" : { }
+}

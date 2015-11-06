@@ -1,0 +1,33 @@
+{
+  "caches" : [ {
+    "level" : 1,
+    "type" : "INST_CACHE",
+    "enable" : true,
+    "cache_size" : 32768,
+    "words_per_cacheline" : 8,
+    "associativity" : "FOUR_WAY",
+    "replacement_policy" : "LRU",
+    "write_policy" : "WRITE_BACK",
+    "write_operation" : "WRITE_ALLOCATE"
+  }, {
+    "level" : 1,
+    "type" : "DATA_CACHE",
+    "enable" : true,
+    "cache_size" : 32768,
+    "words_per_cacheline" : 8,
+    "associativity" : "FOUR_WAY",
+    "replacement_policy" : "LRU",
+    "write_policy" : "WRITE_BACK",
+    "write_operation" : "WRITE_ALLOCATE"
+  }, {
+    "level" : 2,
+    "type" : "BOTH_CACHE",
+    "enable" : true,
+    "cache_size" : 524288,
+    "words_per_cacheline" : 8,
+    "associativity" : "EIGHT_WAY",
+    "replacement_policy" : "LRU",
+    "write_policy" : "WRITE_BACK",
+    "write_operation" : "WRITE_ALLOCATE"
+  } ]
+}

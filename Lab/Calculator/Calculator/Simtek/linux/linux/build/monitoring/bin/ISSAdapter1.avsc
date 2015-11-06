@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "ISSAdapterInfo",
+  "namespace" : "com.spacecodesign.s2.domain.config.generation.hw",
+  "fields" : [ {
+    "name" : "readInterfaceFIFOs",
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "ISSAdapterFIFOProperties",
+        "namespace" : "com.spacecodesign.s2.domain.analysis.fifo",
+        "fields" : [ {
+          "name" : "readerId",
+          "type" : "int"
+        }, {
+          "name" : "writerId",
+          "type" : "int"
+        } ]
+      }
+    }
+  }, {
+    "name" : "writeInterfaceFIFOs",
+    "type" : {
+      "type" : "array",
+      "items" : "com.spacecodesign.s2.domain.analysis.fifo.ISSAdapterFIFOProperties"
+    }
+  } ]
+}

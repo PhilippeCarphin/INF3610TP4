@@ -1,0 +1,14 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// Author : SpaceStudio generation engine
+//
+// Warning: This file content will be overwritten by the next generation process.
+//
+////////////////////////////////////////////////////////////////////////////////
+#include "systemc"
+
+int main(int arg_count, char** arg_value) {
+	sc_core::sc_stop();
+	
+    return 0;
+}

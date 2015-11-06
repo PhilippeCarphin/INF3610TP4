@@ -1,0 +1,19 @@
+################################################################################
+#
+# Filename : controller.cpp.mingw.dat
+#
+# Author : SpaceStudio generation engine
+#
+# Warning: This file content will be overwritten by the next generation process.
+#
+################################################################################
+MODULE_WRITE	6	true	-1	88	unsigned+long
+MODULE_READ	3	true	-1	100	unsigned+long
+MODULE_WRITE	0	true	-1	565	long
+MODULE_WRITE	7	true	-1	575	long
+MODULE_WRITE	5	true	-1	585	long
+MODULE_WRITE	2	true	-1	595	long
+MODULE_READ	0	true	-1	608	long
+MODULE_READ	7	true	-1	622	long
+MODULE_READ	5	true	-1	636	long
+MODULE_READ	2	true	-1	650	long
